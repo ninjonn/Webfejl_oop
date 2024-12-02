@@ -56,3 +56,7 @@ function Person(name){
 Person.prototype.getName = function(){
     return this.name;
 };
+
+function Student(school){
+    this.school = school;
+}
