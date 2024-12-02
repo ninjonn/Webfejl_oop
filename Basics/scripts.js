@@ -49,6 +49,7 @@ gomszab.play();
 console.log(gomszab.getTierLevel());
 
 
+
 function Person(name){
     this.name = name || "Géza";
 }
@@ -57,7 +58,8 @@ Person.prototype.getName = function(){
     return this.name;
 };
 
-function Student(school){
+function Student(name, school){
+    Person.call(this, name)
     this.school = school;
 }
 
