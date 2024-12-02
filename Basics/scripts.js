@@ -60,3 +60,5 @@ Person.prototype.getName = function(){
 function Student(school){
     this.school = school;
 }
+
+Object.setPrototypeOf(Student.prototype, Person.prototype);
