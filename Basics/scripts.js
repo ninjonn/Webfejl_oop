@@ -81,3 +81,24 @@ class Student extends Person {
         this.school = school;
     }
 }
+
+const student = new Student("Géza", "Bolyai")
+console.log(student.getName());
+console.log(student.school);
+
+
+class Animal {
+    constructor(name){
+       this.name = name  
+    }
+
+    hang(){
+        console.log("Hangot ad ki");
+    }
+}
+
+class Bird extends Animal{
+    repul(){
+        console.log("A madár repül");
+    }
+}
