@@ -82,10 +82,6 @@ class Student extends Person {
     }
 }
 
-const student = new Student("Géza", "Bolyai")
-console.log(student.getName());
-console.log(student.school);
-
 
 class Animal {
     constructor(name){
@@ -108,3 +104,15 @@ class Mammal extends Animal{
         console.log("Az emlős sétál");
     }
 }
+
+const student = new Student("Géza", "Bolyai")
+console.log(student.getName());
+console.log(student.school);
+
+const varju = new Bird("Varjú");
+varju.hang();
+varju.repul();
+
+const gepard = new Mammal("Gepárd");
+gepard.hang();
+gepard.seta();
