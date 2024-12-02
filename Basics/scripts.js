@@ -47,3 +47,8 @@ const gomszab = new Player("gomszab")
 console.log(gomszab);
 gomszab.play();
 console.log(gomszab.getTierLevel());
+
+
+function Person(name){
+    this.name = name || "Géza";
+}
