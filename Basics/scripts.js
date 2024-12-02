@@ -102,3 +102,9 @@ class Bird extends Animal{
         console.log("A madár repül");
     }
 }
+
+class Mammal extends Animal{
+    seta(){
+        console.log("Az emlős sétál");
+    }
+}
