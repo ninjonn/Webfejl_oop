@@ -95,13 +95,13 @@ class Animal {
 
 class Bird extends Animal{
     repul(){
-        console.log("A madár repül");
+        console.log(`A(z) ${this.name} repül`);
     }
 }
 
 class Mammal extends Animal{
     seta(){
-        console.log("Az emlős sétál");
+        console.log(`A(z) ${this.name} sétál`);
     }
 }
 
