@@ -7,7 +7,10 @@ constructor(){
 
 hozzaAd(companion){ //azért csak a companion kell paraméternek, mert a manoklist elérhető classon belül
     this.manoklist.push(companion)
+    createRow(companion)
 }
+
+
 }
 
 class Companion{
@@ -20,8 +23,11 @@ class Companion{
     this.productlist = [] //mivel nem szükséges a példány létrehozásakor ezért nem a construktor leszármazottja
  }
 
- getName(){
+ getName(){ //nem kell paraméter, mert a class tulajdonságaira hivatkozunk
     return this.kernev + this.veznev
  }
 
+ productAdd(product){
+    this.productlist.push(product)
+ }
 }

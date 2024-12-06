@@ -44,7 +44,15 @@ document.getElementById('product').addEventListener('submit',function(e){
  * table render
  */
 function initTable(){
+for(let i = 0;i<companionList.length;i++){
+    const currentElement = companionList[i] //listának az aktuális objektumát rakjuk bele egy változóba
+    const companion = new Companion(i,currentElement.firstName,currentElement.lastName,currentElement.area,currentElement.products); //paraméterek sorrendje fontos
+    factory.hozzaAd(companion)
 
+    for(const pr of currentElement.products){
+        companion.productAdd(pr)
+    }
+} 
     // TODO 6
 }
 
@@ -62,3 +70,6 @@ function checkEventListener(e){
     const companionId = row.id;
     // TODO 10
 }
+
+console.log(factory)
+console.log(companion)

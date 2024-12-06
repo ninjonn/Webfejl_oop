@@ -10,6 +10,13 @@ function createRow(companion){
     tbody.appendChild(tableRow);
 
    // TODO 7
+    const teljesnevcell = createCell(tableRow)
+    tableRow.id = companion.id
+    teljesnevcell.innerHTML = companion.getName()
+
+    const areacell = createCell(tableRow)
+    tableRow.id = companion.id
+    areacell.innerHTML = companion.reszleg
 
     const action = createCell(tableRow)
     const button = document.createElement('button');
