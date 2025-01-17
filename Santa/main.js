@@ -72,4 +72,3 @@ function checkEventListener(e){
 }
 
 console.log(factory)
-console.log(companion)
