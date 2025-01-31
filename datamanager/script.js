@@ -64,6 +64,20 @@ class DataManager{
     }
 }
 
+
 class Datatable{
-    
+    /**
+     * 
+     * @param {DataManager} alpha 
+     */
+    constructor(alpha){
+        const table = document.createElement('table')
+        document.body.appendChild(table)
+        const tbody = document.createElement('tbody')
+        table.appendChild(tbody)
+
+        alpha.setUpdateCallback((persons) => {
+            
+        }) 
+    }
 }
