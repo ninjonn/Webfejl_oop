@@ -93,3 +93,7 @@ class Datatable{
         }) 
     }
 }
+
+
+const dataManager = new DataManager([{nev: 'Feri', eletkor:17},{nev:'Teri',eletkor:18},{nev:'Rebi',eletkor:17}])
+const dataTable = new Datatable(dataManager)
