@@ -77,7 +77,19 @@ class Datatable{
         table.appendChild(tbody)
 
         alpha.setUpdateCallback((persons) => {
-            
+            tbody = ''
+            for(const elem of persons){
+                const trow = document.createElement('tr')
+                tbody.appendChild(trow)
+
+                const cella1 = document.createElement('td')
+                cella1.innerHTML = elem.nev
+                trow.appendChild(cella1)
+
+                const cella2 = document.createElement('td')
+                cella2.innerHTML = elem.eletkor
+                trow.appendChild(cella2)
+            }
         }) 
     }
 }
