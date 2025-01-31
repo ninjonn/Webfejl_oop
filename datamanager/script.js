@@ -27,6 +27,7 @@ class DataManager{
      */
     setUpdateCallback(callback){
         this.#updateCallback = callback
+        this.#updateCallback(this.#array)
     }
     /**
      * 
@@ -77,7 +78,7 @@ class Datatable{
         table.appendChild(tbody)
 
         alpha.setUpdateCallback((persons) => {
-            tbody = ''
+            tbody.innerHTML = ''
             for(const elem of persons){
                 const trow = document.createElement('tr')
                 tbody.appendChild(trow)
@@ -93,7 +94,6 @@ class Datatable{
         }) 
     }
 }
-
 
 const dataManager = new DataManager([{nev: 'Feri', eletkor:17},{nev:'Teri',eletkor:18},{nev:'Rebi',eletkor:17}])
 const dataTable = new Datatable(dataManager)
