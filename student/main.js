@@ -1,5 +1,6 @@
-const detailsArea = new DetailsArea('details');
-const studentArea = new StudentArea('student-list');
+const manager = new Manager();
+const detailsArea = new DetailsArea('details', manager);
+const studentArea = new StudentArea('student-list',manager);
 
 const array = [
     {
@@ -54,3 +55,8 @@ const array = [
         "comment": "Shows consistent effort."
     }
 ];
+
+for(const elem of array){ // vegigiteralunk az arrayen, es minden objektum alapjan peldanyositunk egy studentot
+    const student = new Student(elem.name,elem.average,elem.comment,elem.bad);
+    manager.add(student);
+}
