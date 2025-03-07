@@ -6,16 +6,19 @@ class Manager{
     #nextCardCallback
     #appanedCardToSolution
     #finishCallback
+    #addCallBack
 
 
     constructor(array = []){
         this.#array = array;
         this.#solution = {}
         this.#currentCardNumber = 0;
+        this.#addCallBack = () => {}
     }
 
     add(card){
         this.#array.push(card);
+        this.#addCallBack(card);
     }
 
     setNextCardCallback(callback){
@@ -28,6 +31,10 @@ class Manager{
 
     setFinishCallback(callback){
         this.#finishCallback = callback;
+    }
+
+    setAddCallBack(callback){
+        this.#addCallBack = callback;
     }
 
 
@@ -55,6 +62,18 @@ class Manager{
             const result = `${this.#array.length}/${sum}`;
             this.#finishCallback(result);
         }
+    }
+
+    /**
+     * @returns {string} az array tartalma csv formatumban
+     */
+    generateExportText(){
+        const result =  [];
+        for(const card of this.#array){
+            const line = `${card.text};${card.correct}`
+            result.push(line)
+        }
+        return result.join('\n');
     }
 
     start(){
